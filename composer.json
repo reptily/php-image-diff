@@ -1,0 +1,38 @@
+{
+    "name": "reptily/php-image-diff",
+    "description": "Compares the image",
+    "keywords":[
+        "image",
+        "compare",
+        "duplicate",
+        "diff",
+        "php"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Аристархов Владимир",
+            "email": "v.aristarkhov@rabota.ru"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-gd": "*",
+        "ext-exif": "*",
+        "ext-mbstring": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "3.*"
+    },
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "ImageDiff\\": "src"
+        }
+    },
+    "scripts": {
+        "test": "clear && ./vendor/bin/phpunit test",
+        "codecheck": "clear && php ./vendor/squizlabs/php_codesniffer/bin/phpcs -p -w -v --colors ./src"
+    }
+}
